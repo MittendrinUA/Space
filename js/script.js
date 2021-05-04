@@ -37,3 +37,28 @@ if (iconMenu) {
         menuBody.classList.toggle('_active');
     });
 }
+
+// Cards slicker Carousel
+
+$(document).ready(function(){
+    $('.cards__body').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    })
+})
