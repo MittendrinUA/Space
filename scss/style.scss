@@ -881,6 +881,305 @@ body._lock {
     transform: scale(1.04);
 }
 
+// Scarf section
+
+.scarf {
+    margin-top: 250px;
+    padding-bottom: 50px;
+    &__text {
+        width: 80%;
+        margin: 0 auto;
+        color: #23242A;
+        h2 {
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 110%;
+            /* or 70px */
+            letter-spacing: -0.045em;
+        }
+        p {
+            margin-top: 48px;
+            font-size: 28px;
+            line-height: 120%;
+            /* or 34px */
+            letter-spacing: -0.01em;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        margin-top: 70px;
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            
+        }
+    }
+    @media (max-width:920px) {
+        margin-top: 40px;
+        &__body {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__text {
+            width: 100%;
+            p {
+                margin-top: 25px;
+            }
+        }
+        &__img {
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width:620px) {
+        &__text {
+            h2 {
+                font-size: 48px;
+            }
+            p {
+                font-size: 22px;
+                margin-top: 20px;
+            }      
+        }
+        &__img {
+            margin-top: 20px;    
+        }
+    }
+}
+
+// Section bunch (first galery)
+
+.bunch {
+    margin-top: 200px;
+    padding-bottom: 50px;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__main {
+        flex: 0 0 68%;
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__img {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        transition: transform 0.4s ease 0s;
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    }
+    &__img:hover {
+        transform: scale(1.04);
+    }
+    &__img-first {
+        width: 56%;
+        height: auto;
+    }
+    &__img-second {
+        width: 35%;
+        height: auto;
+    }
+    &__img-right {
+        width: 100%;
+        height: auto;
+    }
+    &__text {
+        padding-top: 60px;
+        color: #23242A;
+        h3 {
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 110%;
+            /* or 70px */
+            letter-spacing: -0.045em;
+        }
+        p {
+            font-size: 28px;
+            line-height: 120%;
+            /* or 34px */
+            letter-spacing: -0.01em;
+            margin-top: 45px;
+
+        }
+    }
+    &__right {
+        margin-left: 6%;
+        flex: 1 1 26%;
+        height: auto;
+    }
+    @media (max-width:920px) {
+        margin-top: 100px;
+        &__body {
+            flex-direction: column;
+        }
+        &__main {
+            margin-bottom: 50px;
+        }
+        &__row {
+            justify-content: space-around;
+        }
+        &__text {
+            p {
+                margin-top: 25px;
+            }
+        }
+        &__right {
+            width: 65%;
+            margin-left: 0;
+        }
+    }
+    @media (max-width:550px) {
+        margin-top: 50px;
+        &__row {
+            flex-direction: column-reverse;
+        }
+        &__img-first {
+            width: 95%;
+        }
+        &__img-second {
+            display: none;
+        }
+        &__text {
+            padding-top: 15px;
+            h3 {
+                font-size: 48px;
+            }
+            p {
+                font-size: 22px;
+                margin-top: 20px;
+            }
+        }
+        &__main {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Galery (main)
+
+.galery {
+    margin-top: 230px;
+    padding-bottom: 50px;
+    &__body {
+        display: flex;
+    }
+    &__body-rv {
+        flex-flow: row-reverse;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+        object-fit: cover;
+        border-radius: 12px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        transition: transform 0.4s ease 0s;
+    }
+    img:hover {
+        transform: scale(1.02);
+    }
+    &__side {
+        padding-top: 115px;
+        flex: 1 1 26%;
+        margin-right: 6%;
+    }
+    &__side-rv {
+        padding-top: 0;
+        flex: 1 1 39%;
+        margin: 0 0 0 6%;
+        img {
+            margin-top: 0;
+        }
+    }
+
+    &__main {
+        color: #23242A;
+        flex: 0 0 68%;
+        h2 {
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 110%;
+            /* or 70px */
+            letter-spacing: -0.045em;
+            padding: 0 20px;
+        }
+        p {
+            font-size: 28px;
+            line-height: 120%;
+            /* or 34px */
+            letter-spacing: -0.01em;
+            margin-top: 45px;
+            padding: 0 20px;
+        }
+        
+    }
+    &__main-rv {
+        flex: 1 1 55%;
+    }
+    
+    @media (max-width: 1180px) {
+        &__body {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__side {
+            margin-right: 0;
+            padding-top: 0;
+            width: 320px;
+        }
+        &__main {
+            p {
+                margin-top: 25px;
+            }
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            img {
+                width: 80%;
+                align-self: center;
+            }
+        }
+    }
+    @media (max-width: 920px) {
+        margin-top: 100px;
+        &__main {
+            h2 {
+                font-size: 48px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+    @media (max-width: 520px) {
+        margin-top: 0;
+        &__side {
+            width: 200px;
+        }
+        &__main {
+            h2 {
+                font-size: 38px;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+        }
+        img {
+            margin-top: 0;
+        }
+    }
+
+}
+
+
 
 
 
