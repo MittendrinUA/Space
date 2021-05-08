@@ -62,3 +62,28 @@ $(document).ready(function(){
         ]
     })
 })
+
+// Big carousel
+
+$(document).ready(function(){
+    $('.crsl').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 5800,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        fade: true,
+        responsive: [
+            {
+                breakpoint: 920,
+                settings: {
+                    arrows: false,
+                }
+            }
+        ]
+    })
+})
